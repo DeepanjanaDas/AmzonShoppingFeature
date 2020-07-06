@@ -26,7 +26,7 @@ package Pages;
 				System.out.println("Navigation was unsuccessful");
 			}
 			
-			//screenCapture();
+			screenCapture();
 		}
 	}
 

@@ -1,8 +1,6 @@
 package ResuableMethods;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
@@ -70,6 +68,20 @@ public class CommonMethods extends Hooks{
 	}
 	
 	
+	public void screenCapture()
+	{
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File f = ts.getScreenshotAs(OutputType.FILE);
+		
+			//FileInputStream fileInputStream= new FileInputStream(f);
+			try {
+				FileUtils.copyFile(f, new File (".\\ScreenshotAmazon\\result.jpg"));
+			} catch (Exception e) {
+				
+				e.printStackTrace();
+			}
+		
+	}
 	
 
 }
