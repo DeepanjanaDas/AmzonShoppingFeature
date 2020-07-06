@@ -69,19 +69,7 @@ public class CommonMethods extends Hooks{
 		}
 	}
 	
-	public void screenCapture()
-	{
-		TakesScreenshot ts=(TakesScreenshot)driver;
-		File file=ts.getScreenshotAs(OutputType.FILE);
-		try {
-			FileInputStream fileInputStream= new FileInputStream(file);
-			FileUtils.copyFile(file, new File(".//Screenshot//Result.jpg"));
-		} catch (Exception e) {
-			
-			e.printStackTrace();
-		}
-		
-	}
+	
 	
 
 }
